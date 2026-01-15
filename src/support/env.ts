@@ -2,7 +2,7 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-// added defaults in case someone doesn't want to add .env, should not be done in real world projects
+// added defaults in case someone doesn't want to add .env
 export const env = {
   validUser: {
     email: process.env.VALID_USER_EMAIL ?? 'test@awaish.com',
