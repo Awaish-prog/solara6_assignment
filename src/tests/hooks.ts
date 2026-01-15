@@ -1,7 +1,7 @@
-import { Before, AfterAll, setDefaultTimeout } from "@cucumber/cucumber";
-import CustomWorld from "./world";
-import BrowserManager from "../support/browser_manager";
-import { users } from "../data/user";
+import { Before, AfterAll, setDefaultTimeout } from '@cucumber/cucumber';
+import CustomWorld from './world';
+import BrowserManager from '../support/browser_manager';
+import { users } from '../data/user';
 
 setDefaultTimeout(30 * 1000);
 

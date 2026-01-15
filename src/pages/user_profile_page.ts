@@ -1,13 +1,15 @@
-import { BrowserContext, Page } from "playwright";
-import { env } from "../support/env";
+import { Page } from '@playwright/test';
+import { env } from '../support/env';
 
 
 export default class UserProfilePage {
 
     private _page: Page;
+    private url: string
     
     constructor(page: Page) {
         this._page = page;
+        this.url = `${env.baseUrl}/customer/info`;
     }
 
     get page(): Page {
@@ -15,8 +17,7 @@ export default class UserProfilePage {
     }
 
     async open() {
-        const profileUrl: string = `${env.baseUrl}/customer/info`
-        await this._page.goto(profileUrl);
+        await this._page.goto(this.url);
     }
 
     async refresh() {

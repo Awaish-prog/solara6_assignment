@@ -2,7 +2,7 @@ import { Given, When, Then } from '@cucumber/cucumber';
 import CustomWorld from '../world';
 import UIActions from '../../support/ui_actions';
 import { Selectors } from '../../support/selectors';
-import { expect } from 'playwright/test';
+import { expect } from '@playwright/test';
 
 When('the user opens their profile', async function(this: CustomWorld) {
     await UIActions.click(Selectors.userProfileLink(this.page));

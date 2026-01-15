@@ -1,5 +1,5 @@
 import { setWorldConstructor, World, IWorldOptions} from '@cucumber/cucumber';
-import { Browser, BrowserContext, Page } from 'playwright';
+import { Browser, BrowserContext, Page } from '@playwright/test';
 import BrowserManager from '../support/browser_manager';
 import LoginPage from '../pages/login_page';
 import DashboardPage from '../pages/dashboard_page';

@@ -1,4 +1,4 @@
-import { env } from "../support/env";
+import { env } from '../support/env';
 
 export const users = {
   nonExistent: {

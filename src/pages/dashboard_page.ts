@@ -1,15 +1,17 @@
-import { Page, BrowserContext, expect } from "playwright/test";
-import { Selectors } from "../support/selectors";
-import UIActions from "../support/ui_actions";
-import { env } from "../support/env";
+import { Page, expect } from '@playwright/test';
+import { Selectors } from '../support/selectors';
+import UIActions from '../support/ui_actions';
+import { env } from '../support/env';
 
 
 export default class DashboardPage {
 
     private _page: Page;
+    private url: string;
 
     constructor(page: Page) {
         this._page = page;
+        this.url = env.baseUrl ?? '';
     }
 
     get page(): Page {
@@ -17,12 +19,11 @@ export default class DashboardPage {
     }
 
     async open() {
-        const baseUrl: string = env.baseUrl ?? "";
-        this._page.goto(baseUrl); 
+        this._page.goto(this.url); 
     }
 
     async expectLoaded() {
-        const baseUrl: string = env.baseUrl ?? "";
+        const baseUrl: string = env.baseUrl ?? '';
         await expect(this.page).toHaveURL(baseUrl);
         await expect(
             Selectors.userProfileLink(this.page)
