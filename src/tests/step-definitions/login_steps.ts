@@ -29,5 +29,5 @@ When('the user logs in with an incorrect password', async function(this: CustomW
 });
 
 Then('the error message "The credentials provided are incorrect" should be shown', async function(this: CustomWorld) {
-    await expect(Selectors.incorrectCredentialsMessage(this.loginPage.page)).toBeVisible();
+    await expect(Selectors.incorrectCredentialsMessage(this.loginPage?.page)).toBeVisible();
 });
