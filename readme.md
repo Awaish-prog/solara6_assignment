@@ -22,6 +22,8 @@ Web app under test: [Demo shop](https://demowebshop.tricentis.com), please check
 
 If you don't create .env then the tests will still work, I have added default credentials.
 
+<span style="color:red">⚠️ While using your credentials, please make sure to register with those credentials first otherwise login won't work</span>
+
 ---
 ## 1. Clone the Repository
 
