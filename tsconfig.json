@@ -8,5 +8,5 @@
     "types": ["node", "playwright"],
     "noEmit": true
   },
-  "include": []
+  "include": ["src/**/*.ts"]
 }

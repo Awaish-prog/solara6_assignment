@@ -1,15 +1,12 @@
+@authenticated
 Feature: User profile management
 
   As a logged-in user
   I want to access my profile and update my personal details
   So that my account information stays up to date
 
-  Background:
-    Given the user is logged in
-    And the user is on the dashboard
-
   Scenario: Navigate to user profile from dashboard
-    When the user clicks on their email address
+    When the user opens their profile
     Then the user should be navigated to the user profile page
 
   Scenario: Update user name on user profile
