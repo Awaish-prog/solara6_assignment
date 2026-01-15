@@ -5,6 +5,7 @@
         },
         "publishQuiet": true,
         "dryRun": false,
+        "retry": 2,
         "paths": [
             "src/tests/features/"
         ],
