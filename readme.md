@@ -79,4 +79,4 @@ project-root/
 └── readme.json
 ```
 
-Currently hooks, Ui actions and selectors are insile support but we can them in separate directory when project grows
+Currently hooks, Ui actions and selectors are inside support but we can them in separate directory when project grows
