@@ -31,8 +31,16 @@ export default class CustomWorld extends World {
         return this._context;
     }
 
+    set context(browserContext: BrowserContext) {
+        this._context = browserContext;
+    }
+
     get page(): Page {
         return this._page;
+    }
+
+    set page(page: Page) {
+        this._page = page;
     }
 
     get userName(): string {

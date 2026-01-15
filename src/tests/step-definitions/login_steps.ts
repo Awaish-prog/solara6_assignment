@@ -21,7 +21,7 @@ When('the user logs in with a non-existent account', async function(this: Custom
 });
 
 Then('the error message "No customer account found" should be shown', async function(this: CustomWorld) {
-    await expect(Selectors.noAccountMessage(this.page)).toBeVisible();
+    await expect(Selectors.noAccountMessage(this.loginPage.page)).toBeVisible();
 });
 
 When('the user logs in with an incorrect password', async function(this: CustomWorld){
@@ -29,5 +29,5 @@ When('the user logs in with an incorrect password', async function(this: CustomW
 });
 
 Then('the error message "The credentials provided are incorrect" should be shown', async function(this: CustomWorld) {
-    await expect(Selectors.incorrectCredentialsMessage(this.page)).toBeVisible();
+    await expect(Selectors.incorrectCredentialsMessage(this.loginPage.page)).toBeVisible();
 });

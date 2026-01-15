@@ -6,12 +6,16 @@ import { env } from '../support/env';
 
 export default class LoginPage {
     
-    private page: Page;
+    private _page: Page;
     private url: string;
 
     constructor(page: Page) {
-        this.page = page;
+        this._page = page;
         this.url = `${env.baseUrl}/login`;
+    }
+
+    get page(): Page {
+        return this._page;
     }
 
     async open() {

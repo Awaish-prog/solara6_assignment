@@ -5,7 +5,7 @@ import { Selectors } from '../../support/selectors';
 import { expect } from '@playwright/test';
 
 When('the user opens their profile', async function(this: CustomWorld) {
-    await UIActions.click(Selectors.userProfileLink(this.page));
+    await UIActions.click(Selectors.userProfileLink(this.dashboardPage.page));
 });
 
 Then('the user should be navigated to the user profile page', async function(this: CustomWorld) {
