@@ -70,9 +70,8 @@ project-root/
 │     └── tests/
 │         ├── features/
 │         └── step-definitions/
-├── support/
-├── pages/
-├── data/
+├── .env.example
+├── .gitignore
 ├── cucumber.json
 ├── package.json
 ├── tsconfig.json
