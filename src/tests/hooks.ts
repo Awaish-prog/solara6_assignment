@@ -2,8 +2,9 @@ import { Before, AfterAll, setDefaultTimeout } from '@cucumber/cucumber';
 import CustomWorld from './world';
 import BrowserManager from '../support/browser_manager';
 import { users } from '../data/user';
+import { env } from '../support/env';
 
-setDefaultTimeout(30 * 1000);
+setDefaultTimeout(Number(env.timeout));
 
 Before(async function (this: CustomWorld) {
     await this.init();
