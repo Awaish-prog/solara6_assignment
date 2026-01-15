@@ -11,7 +11,7 @@ export default class DashboardPage {
 
     constructor(page: Page) {
         this._page = page;
-        this.url = env.baseUrl ?? '';
+        this.url = env.baseUrl;
     }
 
     get page(): Page {
@@ -23,7 +23,7 @@ export default class DashboardPage {
     }
 
     async expectLoaded() {
-        const baseUrl: string = env.baseUrl ?? '';
+        const baseUrl: string = env.baseUrl;
         await expect(this.page).toHaveURL(baseUrl);
         await expect(
             Selectors.userProfileLink(this.page)
