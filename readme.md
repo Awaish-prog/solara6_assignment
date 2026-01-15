@@ -51,11 +51,6 @@ Playwright requires browser binaries. Install them using:
 npx playwright install
 ```
 
-(Optional – for CI systems)
-```bash
-npx playwright install --with-deps
-```
-
 ## 4. Add .env file (Optional)
 
 Create a .env file in the project root, please check .env.example file for variables.
