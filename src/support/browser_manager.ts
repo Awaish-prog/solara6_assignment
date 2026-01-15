@@ -1,11 +1,12 @@
 import { Browser, chromium } from '@playwright/test';
+import { env } from './env';
 
 class BrowserManager {
   private static browser: Browser | null = null;
 
   static async getBrowser(): Promise<Browser> {
     if (!BrowserManager.browser) {
-      BrowserManager.browser = await chromium.launch();
+      BrowserManager.browser = await chromium.launch({ headless: env.headless });
     }
     return BrowserManager.browser;
   }
