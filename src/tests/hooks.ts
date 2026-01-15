@@ -18,10 +18,15 @@ Before({tags: '@authenticated'}, async function (this: CustomWorld) {
 });
 
 BeforeAll(async function() {
-    const browser = await BrowserManager.getBrowser();
-    const context = await browser.newContext();
-    const page = await context.newPage();
-    await page.goto(env.baseUrl, { timeout: 60000 });
+
+    try {
+        const browser = await BrowserManager.getBrowser();
+        const context = await browser.newContext();
+        const page = await context.newPage();
+        await page.goto(env.baseUrl, { timeout: Number(env.timeout) });
+    } catch (error) {
+        console.warn('First navigation failed');
+    }
 });
 
 AfterAll(async function () {
