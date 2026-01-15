@@ -17,18 +17,6 @@ Before({tags: '@authenticated'}, async function (this: CustomWorld) {
     await this.dashboardPage.expectLoaded();
 });
 
-// BeforeAll(async function() {
-
-//     try {
-//         const browser = await BrowserManager.getBrowser();
-//         const context = await browser.newContext();
-//         const page = await context.newPage();
-//         await page.goto(env.baseUrl, { timeout: Number(env.timeout) });
-//     } catch (error) {
-//         console.warn('First navigation failed');
-//     }
-// });
-
 AfterAll(async function () {
     await BrowserManager.closeBrowser()
 });
