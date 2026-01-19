@@ -11,7 +11,6 @@ Before(async function (this: CustomWorld) {
 });
 
 Before({tags: '@authenticated'}, async function (this: CustomWorld) {
-    await this.init();
     await this.loginPage.open();
     await this.loginPage.login(users.validUser.email, users.validUser.password);
     await this.dashboardPage.expectLoaded();
